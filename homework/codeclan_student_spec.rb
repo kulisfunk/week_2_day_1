@@ -3,6 +3,9 @@ require("minitest/rg")
 require_relative("./codeclan_student")
 
 class TestStudent < MiniTest::Test
+  # add a setup to prevent repeating student.new code
+  # def setup()
+  # end
 
   def test_student_name()
     student = Student.new("Martin", 3)

@@ -1,5 +1,5 @@
 class Team
-  def initialize(team_name, players_array, team_coach, points)
+  def initialize(team_name, players_array, team_coach, points) #no need to pass points as an argument
     @team = team_name
     @players = players_array
     @coach = team_coach
@@ -35,7 +35,7 @@ class Team
 
   def points_for_result(result)
 
-    if result == "win"
+    if result == "win" #remove returns, not needed
       return @points += 3
       elsif result == "draw"
       return @points += 1

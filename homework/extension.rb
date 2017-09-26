@@ -1,4 +1,5 @@
 class Library
+  #no need to create array when using setup in methods file
   def initialize(books_array = [])
     @books = books_array
   end
@@ -19,7 +20,7 @@ class Library
 
   def book_info_rental(title)
     for book in @books
-      if title = @books[:title]
+      if title == @books[:title]
       return @books[:rental_details]
       end
     end
@@ -32,10 +33,10 @@ class Library
   end
 
   def book_add_details(full_details)
+    puts @books.class
+    @books.push(full_details)
     puts @books
-    @books.merge!(full_details)
-    puts @books
-    return @books
+    return @books[1]
   end
 
 end

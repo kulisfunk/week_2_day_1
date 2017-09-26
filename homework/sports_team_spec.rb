@@ -4,6 +4,13 @@ require_relative("./sports_team")
 
 class TestTeam < MiniTest::Test
 
+# Add a setup to save code repeat
+  # def setup()
+  #   players = ["sporty", "ginger", "posh"]
+  #   @team = ("numpties", players, "becks")
+  # end
+
+
 
 def test_get_team_name()
   team = Team.new("numpties", ["sporty", "ginger", "posh"], "becks",0)
@@ -12,6 +19,7 @@ end
 
 def test_get_players_array()
   team = Team.new("numpties", ["sporty", "ginger", "posh"], "becks", 0)
+  #can also return the array and put .length on get_players_array and assert against number of players
   assert_equal(["sporty", "ginger", "posh"], team.get_players_array())
 end
 
